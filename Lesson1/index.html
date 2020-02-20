@@ -1,0 +1,52 @@
+<html>
+  <head>
+
+    <! -- Logging in the firebase library-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+     <! ----------------------------------->
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1> Itzel's Favorite Music Genres</h1>
+    <div class="content">
+      <form id="add-genre-form" ></form>
+
+
+      <ul id = "genre-list"></ul>
+    </div>
+
+
+    <! -- This is where we do Database stuff-->
+    <script>
+      // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyA4WA6IHoZdkWufCdj2lSVc0wkawV4y11w",
+          authDomain: "tutorial-bb172.firebaseapp.com",
+          databaseURL: "https://tutorial-bb172.firebaseio.com",
+          projectId: "tutorial-bb172",
+          storageBucket: "tutorial-bb172.appspot.com",
+          messagingSenderId: "343682549879",
+          appId: "1:343682549879:web:5b5177280f3a10fc7c5e72",
+          measurementId: "G-5B5GP6V6GY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        //Set up settings
+        db.settings({timestampsInSnapshots: true});
+    </script>
+    <! ----------------------------------->
+
+
+    <script src="app.js"></script>
+  </body>
+
+</html>
